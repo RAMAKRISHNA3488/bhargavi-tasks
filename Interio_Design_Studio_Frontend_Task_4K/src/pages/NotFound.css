@@ -1,0 +1,59 @@
+/* NotFound Page Styles matching Slide 13 reference */
+
+.not-found-page {
+  background-color: var(--bg-dark);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.not-found-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.not-found-code {
+  font-family: var(--font-heading);
+  font-size: clamp(6rem, 12vw, 10rem);
+  font-weight: 800;
+  line-height: 1;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.not-found-heading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin-bottom: 16px;
+}
+
+.not-found-text {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.not-found-img-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3.8;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.not-found-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .not-found-container {
+    grid-template-columns: 1fr;
+  }
+}

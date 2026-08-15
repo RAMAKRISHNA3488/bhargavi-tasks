@@ -1,0 +1,34 @@
+/* FilterTabs Component Styles */
+
+.filter-tabs-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filter-tab-btn {
+  background-color: var(--bg-dark-card);
+  border: 1px solid var(--border-dark-hover);
+  color: var(--text-white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-tab-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.active-filter-tab {
+  background-color: var(--gold) !important;
+  border-color: var(--gold) !important;
+  color: #0E0F11 !important;
+  box-shadow: var(--shadow-gold);
+}

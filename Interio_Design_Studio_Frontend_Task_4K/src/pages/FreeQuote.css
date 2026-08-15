@@ -1,0 +1,29 @@
+/* FreeQuote Page Styles matching Slide 10 reference */
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.quote-image-frame {
+  width: 100%;
+  aspect-ratio: 4 / 4.8;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-dark-hover);
+  box-shadow: var(--shadow-dark);
+}
+
+.quote-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .quote-grid {
+    grid-template-columns: 1fr;
+  }
+}

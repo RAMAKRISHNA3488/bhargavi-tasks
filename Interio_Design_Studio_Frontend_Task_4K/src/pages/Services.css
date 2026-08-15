@@ -1,0 +1,48 @@
+/* Services Page Styles matching Slide 5 reference */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.services-bottom-cta {
+  margin-top: 64px;
+}
+
+.cta-box {
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 48px 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-box h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+}
+
+.cta-box p {
+  max-width: 600px;
+  font-size: 1.02rem;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-box {
+    padding: 32px 20px;
+  }
+}
