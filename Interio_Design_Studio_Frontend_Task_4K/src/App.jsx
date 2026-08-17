@@ -17,6 +17,7 @@ import ProjectsGallery from './pages/ProjectsGallery';
 import NotFound from './pages/NotFound';
 
 import ConfirmedStatus from './pages/ConfirmedStatus';
+import TermsAndConditions from './pages/TermsAndConditions';
 
 // Scroll to Top helper on route changes
 function ScrollToTop() {
@@ -47,6 +48,8 @@ export default function App() {
             <Route path="/projects" element={<ProjectsGallery />} />
             <Route path="/confirmed" element={<ConfirmedStatus />} />
             <Route path="/status" element={<ConfirmedStatus />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

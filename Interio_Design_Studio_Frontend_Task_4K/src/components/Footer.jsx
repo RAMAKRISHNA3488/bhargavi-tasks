@@ -50,6 +50,7 @@ export default function Footer() {
             <li><Link to="/blog">Latest Blog</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/confirmed">Check Booking Status</Link></li>
+            <li><Link to="/terms">Terms & Conditions</Link></li>
           </ul>
         </div>
 
@@ -91,9 +92,9 @@ export default function Footer() {
         <div className="container footer-bottom-content">
           <p>© {new Date().getFullYear()} Interio Design Studio. All rights reserved.</p>
           <div className="footer-legal-links">
-            <Link to="/contact">Privacy Policy</Link>
+            <Link to="/terms">Privacy Policy</Link>
             <span className="dot">•</span>
-            <Link to="/contact">Terms of Service</Link>
+            <Link to="/terms">Terms of Service</Link>
           </div>
         </div>
       </div>
