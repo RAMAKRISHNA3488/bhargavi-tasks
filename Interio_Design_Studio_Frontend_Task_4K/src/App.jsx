@@ -16,6 +16,8 @@ import FreeQuote from './pages/FreeQuote';
 import ProjectsGallery from './pages/ProjectsGallery';
 import NotFound from './pages/NotFound';
 
+import ConfirmedStatus from './pages/ConfirmedStatus';
+
 // Scroll to Top helper on route changes
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -43,6 +45,8 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/quote" element={<FreeQuote />} />
             <Route path="/projects" element={<ProjectsGallery />} />
+            <Route path="/confirmed" element={<ConfirmedStatus />} />
+            <Route path="/status" element={<ConfirmedStatus />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

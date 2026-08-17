@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import './ContactForm.css';
 
 export default function ContactForm() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -59,10 +61,18 @@ export default function ContactForm() {
     // Simulate real frontend submission delay
     setTimeout(() => {
       setStatus('success');
-      setServerMessage('Thank you! Your message has been sent successfully. Our team will get back to you shortly.');
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      setErrors({});
-    }, 1200);
+      const randomRef = `INT-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
+      navigate('/confirmed', {
+        state: {
+          refNumber: randomRef,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: 'General Interior Consultation',
+          details: formData.message
+        }
+      });
+    }, 1000);
   };
 
   return (

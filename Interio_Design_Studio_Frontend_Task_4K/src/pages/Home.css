@@ -236,6 +236,8 @@
 
 /* Free Quote Banner */
 .home-quote-cta-banner {
+  position: relative;
+  overflow: hidden;
   background-color: var(--bg-dark-secondary);
   border-top: 1px solid var(--border-gold);
   border-bottom: 1px solid var(--border-gold);

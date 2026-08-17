@@ -49,6 +49,7 @@ export default function Footer() {
             <li><Link to="/portfolio">Portfolio</Link></li>
             <li><Link to="/blog">Latest Blog</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/confirmed">Check Booking Status</Link></li>
           </ul>
         </div>
 

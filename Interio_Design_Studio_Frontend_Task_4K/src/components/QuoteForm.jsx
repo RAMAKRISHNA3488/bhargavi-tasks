@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { useNavigate, Link } from 'react-router-dom';
+import { Send, CheckCircle2, AlertCircle, Loader2, ArrowRight } from 'lucide-react';
 import './ContactForm.css';
 
 export default function QuoteForm() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -76,17 +78,19 @@ export default function QuoteForm() {
 
     setTimeout(() => {
       setStatus('success');
-      setServerMessage('Your quote request has been received! Our senior interior architect will contact you within 24 hours.');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        budget: '',
-        details: ''
+      const randomRef = `INT-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
+      navigate('/confirmed', {
+        state: {
+          refNumber: randomRef,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          budget: formData.budget,
+          details: formData.details
+        }
       });
-      setErrors({});
-    }, 1200);
+    }, 1000);
   };
 
   return (

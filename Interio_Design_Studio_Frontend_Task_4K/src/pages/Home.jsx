@@ -6,6 +6,7 @@ import SectionTitle from '../components/SectionTitle';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/projects';
 import { services } from '../data/services';
+import PixelSnow from '../components/PixelSnow';
 import './Home.css';
 
 export default function Home() {
@@ -67,7 +68,22 @@ export default function Home() {
     <div className="home-page">
       {/* 1. Hero Section */}
       <section className="home-hero-section">
-        <div className="container hero-container">
+        {/* PixelSnow Background Overlay */}
+        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
+          <PixelSnow
+            color="#E5A93C"
+            flakeSize={0.012}
+            minFlakeSize={1.25}
+            pixelResolution={180}
+            speed={0.9}
+            density={0.25}
+            direction={135}
+            brightness={0.9}
+            variant="round"
+          />
+        </div>
+
+        <div className="container hero-container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Left Content */}
           <div className="hero-content-left animate-fade-in">
             <span className="eyebrow-gold">DESIGN THAT INSPIRES</span>
@@ -206,7 +222,21 @@ export default function Home() {
 
       {/* 5. Free Quote Banner */}
       <section className="home-quote-cta-banner">
-        <div className="container">
+        <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
+          <PixelSnow
+            color="#ffffff"
+            flakeSize={0.01}
+            minFlakeSize={1.25}
+            pixelResolution={200}
+            speed={1.0}
+            density={0.25}
+            direction={120}
+            brightness={0.85}
+            variant="snowflake"
+          />
+        </div>
+
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="quote-cta-inner">
             <div className="quote-cta-text">
               <span className="eyebrow-gold">READY TO TRANSFORM YOUR SPACE?</span>
