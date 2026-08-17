@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, User, Phone, Mail, FileText, CheckCircle2, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Calendar, Clock, User, Phone, Mail, FileText, CheckCircle2, ArrowRight } from 'lucide-react';
 import { departmentsData, doctorsData } from '../data/healthcareData';
 import './CardComponents.css';
 
@@ -52,12 +53,25 @@ export default function AppointmentForm({ preselectedDoctor = '', preselectedDep
     const deptObj = departmentsData.find(d => d.id === formData.department || d.name === formData.department);
     const departmentName = deptObj ? deptObj.name : formData.department;
 
-    setSubmittedDetails({
+    const newBookingObj = {
       ...formData,
       doctorName,
       departmentName,
-      bookingRef: 'CP-' + Math.floor(100000 + Math.random() * 900000)
-    });
+      doctorSpecialty: selectedDocObj?.specialty || departmentName,
+      doctorImage: selectedDocObj?.image || '',
+      bookingRef: 'CP-' + Math.floor(100000 + Math.random() * 900000),
+      status: 'Confirmed',
+      createdAt: new Date().toISOString().split('T')[0]
+    };
+
+    try {
+      const existing = JSON.parse(localStorage.getItem('careplus_confirmed_appointments') || '[]');
+      localStorage.setItem('careplus_confirmed_appointments', JSON.stringify([newBookingObj, ...existing]));
+    } catch (err) {
+      console.error('Failed to save booking to localStorage', err);
+    }
+
+    setSubmittedDetails(newBookingObj);
     setIsSubmitted(true);
   };
 
@@ -110,9 +124,15 @@ export default function AppointmentForm({ preselectedDoctor = '', preselectedDep
           </div>
         </div>
 
-        <button onClick={handleReset} className="btn btn-primary mt-6">
-          Book Another Appointment
-        </button>
+        <div className="flex items-center justify-center gap-4 mt-8 flex-wrap">
+          <button onClick={handleReset} className="btn btn-secondary">
+            Book Another Appointment
+          </button>
+          <Link to="/confirmed-appointments" className="btn btn-primary inline-flex items-center gap-2">
+            <span>View All Confirmed Appointments</span>
+            <ArrowRight size={18} />
+          </Link>
+        </div>
       </div>
     );
   }

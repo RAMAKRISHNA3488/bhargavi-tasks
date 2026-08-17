@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
-import { PhoneCall, Menu, X, Plus, Calendar } from 'lucide-react';
+import { PhoneCall, Menu, X, Plus, Calendar, CheckCircle2 } from 'lucide-react';
 import './Header.css';
 
 export default function Header() {
@@ -64,7 +64,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Emergency Info & Action Button */}
+        {/* Emergency Info & Action Buttons */}
         <div className="header-actions">
           <div className="emergency-info">
             <div className="phone-icon-badge">
@@ -82,6 +82,14 @@ export default function Header() {
           >
             <Calendar size={18} />
             <span>Book Appointment</span>
+          </button>
+
+          <button
+            onClick={() => navigate('/confirmed-appointments')}
+            className="btn btn-secondary header-book-btn"
+          >
+            <CheckCircle2 size={18} />
+            <span>Confirmed Appointments</span>
           </button>
 
           {/* Hamburger Menu Toggle for Tablet/Mobile */}
@@ -112,7 +120,7 @@ export default function Header() {
             ))}
           </nav>
           
-          <div className="mobile-drawer-footer">
+          <div className="mobile-drawer-footer flex flex-col gap-3">
             <div className="mobile-emergency">
               <PhoneCall size={20} className="text-blue" />
               <div>
@@ -120,6 +128,7 @@ export default function Header() {
                 <a href="tel:+10123456789" className="font-bold">+1 (012) 345 6789</a>
               </div>
             </div>
+            
             <button
               onClick={() => {
                 setIsMobileMenuOpen(false);
@@ -128,6 +137,16 @@ export default function Header() {
               className="btn btn-primary w-full"
             >
               Book Appointment
+            </button>
+
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                navigate('/confirmed-appointments');
+              }}
+              className="btn btn-secondary w-full"
+            >
+              Confirmed Appointments
             </button>
           </div>
         </div>

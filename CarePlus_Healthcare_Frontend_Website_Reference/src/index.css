@@ -69,11 +69,16 @@ input, select, textarea {
 }
 
 /* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
 .heading-xl {
   font-size: 3.25rem;
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .heading-lg {
@@ -81,17 +86,24 @@ input, select, textarea {
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
 .heading-md {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.3;
+  text-align: center;
 }
 
 .heading-sm {
   font-size: 1.15rem;
   font-weight: 600;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .sub-heading-badge {

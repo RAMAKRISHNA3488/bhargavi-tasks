@@ -28,6 +28,7 @@
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .service-description {
@@ -74,7 +75,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 20%;
   transition: transform 0.4s ease;
 }
 
@@ -93,6 +94,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-dark);
+  text-align: center;
 }
 
 .doctor-specialty {
@@ -179,6 +181,7 @@
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .department-desc {
@@ -241,6 +244,7 @@
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .package-price-row {
@@ -351,6 +355,7 @@
   color: var(--text-dark);
   margin-bottom: 10px;
   line-height: 1.35;
+  text-align: center;
 }
 
 .blog-excerpt {
@@ -397,6 +402,7 @@
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 6px;
+  text-align: center;
 }
 
 .blog-horizontal-excerpt {

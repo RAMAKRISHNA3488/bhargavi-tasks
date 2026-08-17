@@ -66,15 +66,17 @@
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
+  flex-shrink: 1;
 }
 
 .nav-item {
   position: relative;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--text-dark);
   padding: 6px 0;
+  white-space: nowrap;
   transition: var(--transition);
 }
 
@@ -101,24 +103,33 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header-book-btn {
+  padding: 10px 18px;
+  font-size: 0.88rem;
+  white-space: nowrap;
 }
 
 .emergency-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  white-space: nowrap;
 }
 
 .phone-icon-badge {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: var(--primary-light);
   color: var(--primary-blue);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .emergency-text {
@@ -127,13 +138,13 @@
 }
 
 .emergency-label {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--text-muted);
 }
 
 .emergency-number {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--text-dark);
 }
@@ -199,19 +210,28 @@
 }
 
 /* Responsive Media Queries */
-@media (max-width: 1024px) {
-  .desktop-nav {
-    gap: 18px;
-  }
-  .header-actions {
-    gap: 16px;
-  }
+@media (max-width: 1280px) {
   .emergency-info {
     display: none;
   }
+  .desktop-nav {
+    gap: 16px;
+  }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1100px) {
+  .header-book-btn span {
+    display: inline;
+  }
+  .desktop-nav {
+    gap: 14px;
+  }
+  .nav-item {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 992px) {
   .desktop-nav {
     display: none;
   }

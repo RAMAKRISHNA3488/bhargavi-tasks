@@ -9,7 +9,9 @@ import Services from './pages/Services';
 import Doctors from './pages/Doctors';
 import DoctorProfile from './pages/DoctorProfile';
 import Departments from './pages/Departments';
+import DepartmentDetails from './pages/DepartmentDetails';
 import Appointment from './pages/Appointment';
+import ConfirmedAppointments from './pages/ConfirmedAppointments';
 import Packages from './pages/Packages';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
@@ -39,7 +41,9 @@ export default function App() {
             <Route path="/doctors" element={<Doctors />} />
             <Route path="/doctors/:id" element={<DoctorProfile />} />
             <Route path="/departments" element={<Departments />} />
+            <Route path="/departments/:id" element={<DepartmentDetails />} />
             <Route path="/appointment" element={<Appointment />} />
+            <Route path="/confirmed-appointments" element={<ConfirmedAppointments />} />
             <Route path="/packages" element={<Packages />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />

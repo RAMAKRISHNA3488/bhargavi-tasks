@@ -12,7 +12,7 @@ export default function DepartmentCard({ department }) {
       <div className="department-body">
         <h3 className="department-title">{department.name}</h3>
         <p className="department-desc">{department.description}</p>
-        <Link to="/departments" className="department-link">
+        <Link to={`/departments/${department.id}`} className="department-link">
           <span>Learn More</span>
           <ArrowRight size={16} />
         </Link>

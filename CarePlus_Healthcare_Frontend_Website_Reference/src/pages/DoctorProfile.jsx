@@ -154,7 +154,7 @@ export default function DoctorProfile() {
                   </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-lg w-full mt-2">
+                <button type="submit" className="btn btn-primary btn-lg w-full mt-6">
                   Book Now
                 </button>
               </form>

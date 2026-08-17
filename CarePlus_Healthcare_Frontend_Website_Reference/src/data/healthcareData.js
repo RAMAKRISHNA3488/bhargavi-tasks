@@ -93,7 +93,7 @@ export const doctorsData = [
     languages: 'English, German',
     about: 'Dr. Emily Davis is dedicated to providing compassionate healthcare to children from birth through adolescence. She is passionate about preventive child health and immunization.',
     expertise: ['Newborn Care', 'Pediatric Asthma', 'Immunization & Vaccines', 'Developmental Milestone Tracking'],
-    image: 'https://images.unsplash.com/photo-1594824813566-78a011a68d06?auto=format&fit=crop&q=80&w=600'
+    image: '/images/dr-emily-davis.jpg'
   },
   {
     id: 4,
@@ -123,7 +123,7 @@ export const doctorsData = [
     languages: 'English, Spanish',
     about: 'Dr. Olivia Martinez provides comprehensive reproductive healthcare, high-risk pregnancy monitoring, and minimally invasive laparoscopic surgeries.',
     expertise: ['High-Risk Maternity Care', 'Laparoscopic Surgery', 'PCOS & Hormonal Care', 'Menopause Wellness'],
-    image: 'https://images.unsplash.com/photo-1594824813566-78a011a68d06?auto=format&fit=crop&q=80&w=600'
+    image: 'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 6,
@@ -148,42 +148,132 @@ export const departmentsData = [
     name: 'Cardiology',
     tagline: 'Heart & Vascular Care',
     description: 'Heart and blood vessel disorders treatment, state-of-the-art cath labs, and cardiac rehabilitation.',
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600'
+    longDescription: 'Our Cardiology Department provides comprehensive cardiovascular care ranging from early diagnostic screening to advanced interventional cardiology procedures. Equipped with modern cardiac catheterization laboratories and 24/7 emergency response teams, our cardiologists deliver world-class treatment for heart disease, arrhythmias, and vascular conditions.',
+    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600',
+    treatments: [
+      'Coronary Angioplasty & Stenting',
+      '3D Echocardiography',
+      'Pacemaker & ICD Implantation',
+      'Preventive Heart Screening',
+      'Hypertension Management',
+      'Cardiac Rehabilitation'
+    ],
+    facilities: [
+      '24/7 Emergency Cardiac Care Unit',
+      'Advanced Flat-Panel Cath Lab',
+      'Dedicated Cardiac ICU',
+      'Non-Invasive Diagnostic Suite'
+    ]
   },
   {
     id: 'neurology',
     name: 'Neurology',
     tagline: 'Brain & Spine Institute',
     description: 'Brain, spine, and nervous system disorders diagnosis, stroke unit, and specialized neuro-imaging.',
-    image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=600'
+    longDescription: 'The Neurology Department offers specialized care for complex brain, spinal cord, and peripheral nerve disorders. Our multidisciplinary neurosciences team utilizes state-of-the-art neuro-imaging, EEG, and MRI technology to treat strokes, epilepsy, Parkinson’s disease, chronic migraines, and neurodegenerative conditions.',
+    image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=600',
+    treatments: [
+      'Acute Stroke Intervention',
+      'Comprehensive Epilepsy Care',
+      'Migraine & Headache Clinic',
+      'Spine & Nerve Disorder Therapy',
+      'Parkinson’s & Movement Disorder Care',
+      'Neuro-Rehabilitation'
+    ],
+    facilities: [
+      '24/7 Acute Stroke Response Team',
+      '3T High-Definition MRI & CT Scanner',
+      'Video-EEG Monitoring Suite',
+      'Dedicated Neuro-ICU'
+    ]
   },
   {
     id: 'orthopedics',
     name: 'Orthopedics',
     tagline: 'Bone & Joint Surgery',
     description: 'Bone, joint and muscle care, advanced trauma surgery, joint replacements, and sports physical therapy.',
-    image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600'
+    longDescription: 'Our Orthopedic Department specializes in restoring mobility and relieving joint pain through cutting-edge surgical and non-surgical treatments. From computer-assisted total knee and hip replacements to arthroscopic sports injury therapies, our experienced orthopedic surgeons deliver exceptional outcomes.',
+    image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=600',
+    treatments: [
+      'Total Knee & Hip Replacement',
+      'Arthroscopic Shoulder & Knee Surgery',
+      'Complex Trauma Reconstruction',
+      'Spine & Disc Surgery',
+      'Sports Injury Rehabilitation',
+      'Pediatric Orthopedics'
+    ],
+    facilities: [
+      'Ultra-Clean Laminar Airflow Operation Theaters',
+      'Advanced Sports Rehabilitation Center',
+      'Computer-Navigated Joint Replacement Unit',
+      'Comprehensive Bone Densitometry (DEXA)'
+    ]
   },
   {
     id: 'pediatrics',
     name: 'Pediatrics',
     tagline: 'Child Healthcare',
     description: 'Complete healthcare for infants and children, NICU facility, adolescent care, and growth monitoring.',
-    image: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=80&w=600'
+    longDescription: 'The Pediatrics Department delivers compassionate, family-centered medical care for newborns, infants, children, and adolescents. With dedicated Level III NICU facilities and pediatric subspecialists, we manage everything from routine developmental assessments to complex childhood illnesses.',
+    image: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=80&w=600',
+    treatments: [
+      'Newborn Care & NICU Services',
+      'Childhood Vaccination & Immunization',
+      'Pediatric Asthma & Allergy Care',
+      'Growth & Developmental Audits',
+      'Childhood Infection Treatment',
+      'Pediatric Nutrition Counseling'
+    ],
+    facilities: [
+      'Level III Neonatal Intensive Care Unit (NICU)',
+      'Child-Friendly Outpatient Clinics',
+      '24/7 Emergency Pediatric Response',
+      'Pediatric Isolation Units'
+    ]
   },
   {
     id: 'gynecology',
     name: 'Gynecology',
     tagline: 'Women’s Health',
     description: 'Women’s health and maternity care, birthing suites, fetal medicine, and laparoscopic procedures.',
-    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600'
+    longDescription: 'Our Obstetrics & Gynecology Department provides holistic healthcare tailored to women at every stage of life. From high-risk pregnancy monitoring and luxury birthing suites to advanced minimally invasive laparoscopic gynecological surgeries, our team prioritizes safety, dignity, and comfort.',
+    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600',
+    treatments: [
+      'High-Risk Maternity & Antenatal Care',
+      'Laparoscopic Hysterectomy & Myomectomy',
+      'PCOS & Hormonal Disorder Management',
+      'Infertility Evaluation & Counseling',
+      'Menopause & Well-Woman Health',
+      'Fetal Medicine & 4D Ultrasound'
+    ],
+    facilities: [
+      'State-of-the-Art Birthing Suites',
+      'Advanced Minimally Invasive Surgical Suite',
+      'Fetal Wellbeing Monitoring Station',
+      'Post-Natal Care & Lactation Clinic'
+    ]
   },
   {
     id: 'dental',
     name: 'Dental Care',
     tagline: 'Oral Health & Surgery',
     description: 'Oral health and dental treatments, digital X-rays, laser dentistry, and cosmetic orthodontics.',
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=600'
+    longDescription: 'The Dental Care Department offers full-spectrum oral healthcare, aesthetic smile enhancements, and oral surgical procedures in a relaxed, painless environment. Utilizing digital intra-oral scanners, laser dentistry, and premium implant systems, our dental experts restore beautiful smiles.',
+    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=600',
+    treatments: [
+      'Computer-Guided Dental Implants',
+      'Single-Visit Painless Root Canal',
+      'Cosmetic Smile Design & Veneers',
+      'Invisible Orthodontic Aligners',
+      'Laser Gum Treatment',
+      'Teeth Whitening & Oral Prophylaxis'
+    ],
+    facilities: [
+      'Digital Low-Radiation Intra-Oral X-Rays',
+      'Laser Dental Treatment Suites',
+      'Pain-Free Anesthesia Systems',
+      'Strict Autoclave Sterilization Unit'
+    ]
   }
 ];
 
@@ -262,6 +352,51 @@ export const blogsData = [
     category: 'Wellness',
     image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=600',
     content: 'A strong immune system protects your body against infections. Focus on eating a colorful variety of fruits rich in Vitamin C, staying hydrated, getting 7-8 hours of sound sleep, and taking daily Vitamin D supplements during seasonal shifts.'
+  },
+  {
+    id: 4,
+    title: 'Managing Stress & Mental Health in Daily Life',
+    excerpt: 'Practical mindfulness techniques, breathing exercises, and lifestyle adjustments to protect your mental health.',
+    date: 'April 28, 2026',
+    category: 'Mental Wellness',
+    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600',
+    content: 'Chronic stress can negatively impact your cardiovascular health and immune system. Practicing 10 minutes of daily mindfulness meditation, engaging in regular outdoor walks, maintaining work-life boundaries, and seeking guidance from certified mental health professionals can dramatically improve emotional resilience.'
+  },
+  {
+    id: 5,
+    title: 'Essential Ergonomics & Posture Tips for Desk Workers',
+    excerpt: 'Prevent spinal strain, neck pain, and repetitive stress injuries with proper workplace ergonomics.',
+    date: 'April 20, 2026',
+    category: 'Orthopedics',
+    image: 'https://images.unsplash.com/photo-1588702547919-26089e690ecc?auto=format&fit=crop&q=80&w=600',
+    content: 'Long hours of sitting can place undue strain on your lumbar spine and cervical vertebrae. Ensure your monitor is at eye level, keep your feet flat on the floor, take a 5-minute movement break every hour, and incorporate back-strengthening stretches into your daily routine.'
+  },
+  {
+    id: 6,
+    title: 'Nutrition & Gut Health: The Brain-Gut Connection',
+    excerpt: 'Discover how gut microbiota influences digestion, mood regulation, and long-term metabolic health.',
+    date: 'April 12, 2026',
+    category: 'Nutrition',
+    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600',
+    content: 'Your gut microbiome plays a pivotal role in overall physical and cognitive health. Consuming prebiotic fibers, fermented foods like yogurt and kefir, minimizing processed sugars, and staying well-hydrated helps nourish beneficial gut bacteria.'
+  },
+  {
+    id: 7,
+    title: 'Pediatric Care: Healthy Sleep Habits for Growing Children',
+    excerpt: 'How consistent sleep schedules improve cognitive development, immunity, and growth in young children.',
+    date: 'April 5, 2026',
+    category: 'Pediatrics',
+    image: 'https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?auto=format&fit=crop&q=80&w=600',
+    content: 'Adequate sleep is critical for brain development, physical growth, and immune defense in children. Establish a calming screen-free bedtime routine, maintain consistent sleep hours, and ensure a quiet, comfortable sleep environment.'
+  },
+  {
+    id: 8,
+    title: 'Preventing Joint & Bone Loss in Senior Years',
+    excerpt: 'Key exercise strategies and dietary calcium recommendations to maintain bone density and mobility.',
+    date: 'March 29, 2026',
+    category: 'Senior Health',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=600',
+    content: 'As we age, preserving bone mineral density and joint flexibility is essential for maintaining independent mobility. Weight-bearing exercises, resistance training, adequate Vitamin D3/Calcium intake, and regular bone density screenings protect against osteoporosis.'
   }
 ];
 
